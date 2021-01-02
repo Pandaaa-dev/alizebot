@@ -17,7 +17,11 @@ const Command = (props) => {
     }
     useEffect(()=> {
         console.log(modules.length)
-        fetch('https://alizebot.moe/category', {mode: 'no-cors'}).then(res => res.json()).then(res => {
+        fetch('https://alizebot.moe/category', {mode: 'no-cors'})
+        .then(res => {
+            return res.json()
+        })
+        .then(res => {
             setModules(res)
             console.log(res)
             const commands = modules.find(moduleSing => moduleSing.categoryName == activeModule)

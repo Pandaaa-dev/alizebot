@@ -14,7 +14,7 @@ const Home = (props) => {
 
 
     useEffect(() =>{
-        fetch('/stats')
+        fetch('https://alizebot.moe/stats')
         .then(res => res.json())
         .then(res => {
             console.log(res)

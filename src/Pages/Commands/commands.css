@@ -1,0 +1,83 @@
+.commandsContainer {
+    margin-top: 3.5vh;
+    min-height: calc(100vh - 3.5vh);
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    /* flex-direction:; */
+
+}
+
+.loader {
+    /* display: none; */
+    /* margin-top: 15rem; */
+    margin: 5rem auto;
+}
+
+.commandsMainContainer {
+    display: flex;
+    margin: 0 25%;
+}
+
+ul {
+    list-style: none;
+}
+
+.moduleWrapper {
+    background-color: #f078c0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    height: 2.5rem;
+    width: 8rem;
+    min-height: 2.5rem;
+    width: 8rem;
+    display: flex;
+    /* pointer: cursor */
+    color: white;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}
+.moduleWrapper:hover {
+    cursor: pointer; 
+    opacity: 0.6;
+}
+.moduleListItem:hover {
+    cursor: pointer;
+}
+
+.commandWrapper {
+    background-color: rgba(189, 195, 199, 0.45);
+    color: whitesmoke;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-radius: 15px;
+    padding: 1rem 1rem;
+    min-width: 40vw;
+}
+
+.commandTitle {
+    font-size: larger;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid black;
+    padding-bottom: 0.5rem;
+}
+
+.active {
+    color: white;
+    background: #c71585;
+}
+
+.subcmd {
+    margin-bottom: 1rem;
+    opacity: 0.5;
+    font-family: monospace;
+    font-size: large;
+}
+
+.helpText {
+    font-family: monospace;
+    font-size: 1.1rem;
+}

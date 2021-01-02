@@ -1,0 +1,76 @@
+.HomeContainer {
+    height: calc(100vh - 3.5vh);
+    margin-top: 3.5vh;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('../../assets/8Zpj0Pz.png');
+    background-repeat: no-repeat;
+    background-position-y: -15rem;
+    background-size: 100%;
+}
+
+.homeTitle {
+    font-size: 6vh;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: lavenderblush;
+    /* box-shadow: black ; */
+    /* display: inline; */
+    font-family: monospace;
+    text-shadow: black 0.5rem 1rem 1rem ;
+}
+.link {
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+.homeDesc {
+    font-size: 3vh;
+    font-family: monospace;
+    font-weight: lighter;
+    margin-bottom: 2rem;
+    color: lavenderblush;
+    text-shadow: black 0.2rem 0.5rem 0.8rem ;
+    margin: 0 25%;
+}
+.homeContainerBackdrop {
+    width: 100%;
+    height: inherit;
+    margin: auto;
+    background-color: RGBA(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.homePfpIcon {
+    /* text-shadow: black 0.5rem 1rem 1rem ; */
+    display: inline-block;
+    width: 25vh;
+    height: 25vh;
+    background: url('../../assets/okay2.png');
+    margin: 0 auto;
+    background-size: 100%;
+}
+
+.btn {
+    width: 16vh;
+    height: 5vh;
+}
+.homeButtons {
+    margin-top: 5vh;
+}
+.btn:nth-child(2){
+    margin-left: 5vh;
+}
+
+.presentTitles {
+    font-size: 2rem;
+    font-family: monospace;
+    color: white;
+    opacity: 0.8;
+    margin: 2rem 0;
+}

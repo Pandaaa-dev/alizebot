@@ -17,7 +17,7 @@ const Command = (props) => {
     }
     useEffect(()=> {
         console.log(modules.length)
-        fetch('/category')
+        fetch('https://alizebot.moe/category')
         .then(res => res.json())
         .then(res => {
             setModules(res)

@@ -17,7 +17,7 @@ const Command = (props) => {
     }
     useEffect(()=> {
         console.log(modules.length)
-        fetch('https://alizebot.moe/category')
+        fetch('https://alizebot.moe/category', {mode: 'no-cors'})
         .then(res => res.json())
         .then(res => {
             setModules(res)

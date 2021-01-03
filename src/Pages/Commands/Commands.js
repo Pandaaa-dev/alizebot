@@ -17,18 +17,14 @@ const Command = (props) => {
     }
     useEffect(()=> {
         console.log(modules.length)
-        fetch('https://alizebot.moe/category', {mode: 'no-cors'})
-        .then(res => {
-            return res.json()
-        })
-        .then(res => {
-            setModules(res)
-            console.log(res)
+        fetch('http://51.210.181.245:10009/category', {mode: 'no-cors'})
+        .then(async res => {
+            setModules( await res.json())
+            console.log( await res.json())
             const commands = modules.find(moduleSing => moduleSing.categoryName == activeModule)
             setPresentCommands(commands)
         })
         .catch(err => console.log(err))
-
     }, [])
 
     useEffect(()=> {
@@ -90,7 +86,7 @@ const Command = (props) => {
                                                 <div className="helpText">
                                                     {command.helpText.split("<br>").filter(line => line.length).map(line => {
                                                     return(
-                                                        <div>{line}</div>
+                                                        <div key = {line}>{line}</div>
                                                     )
                                                     })}
                                               </div> 

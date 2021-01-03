@@ -14,7 +14,7 @@ const Home = (props) => {
 
 
     useEffect(() =>{
-        fetch('https://alizebot.moe/stats')
+        fetch('http://51.210.181.245:10009/stats')
         .then(res => res.json())
         .then(res => {
             console.log(res)

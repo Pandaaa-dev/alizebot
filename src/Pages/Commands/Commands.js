@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react'
 import './commands.css'
 import Loader from 'react-loader-spinner'
+import Box from '@material-ui/core/Box';
+import MobileCommands from '../MobileCommands/MobileCommands'
+import axios from 'axios'
+import {Fade} from 'react-awesome-reveal'
 
 
 const Command = (props) => {
@@ -11,24 +15,17 @@ const Command = (props) => {
     })
     const setNewActiveModule = (categoryName) => {
         setActiveModule(categoryName)
-        // console.log(modules.find)
-        const presentCommands  = modules.find(moduleSing => moduleSing.categoryName == activeModule )
-       console.log(presentCommands)
     }
     useEffect(()=> {
-        console.log(modules.length)
-        fetch('http://51.210.181.245:10009/category', {mode: 'no-cors'})
-        .then(async res => {
-            setModules( await res.json())
-            console.log( await res.json())
+        axios.get('https://alizebot.moe/category').then(res => {
+            // res = res.data
+            setModules( res.data)
             const commands = modules.find(moduleSing => moduleSing.categoryName == activeModule)
             setPresentCommands(commands)
         })
-        .catch(err => console.log(err))
     }, [])
 
     useEffect(()=> {
-        
         const commands = modules.find(moduleSing => moduleSing.categoryName == activeModule)
         setPresentCommands(commands)
         const presentActiveEl = document.getElementsByClassName('active')
@@ -36,7 +33,6 @@ const Command = (props) => {
             presentActiveEl[0].classList.remove('active')
         }
        const activeElement =  document.getElementsByClassName(activeModule);
-        console.log(activeElement[0])   
         if(activeElement.length < 1) return
         activeElement[0].classList.add('active')
     }, [activeModule])
@@ -53,11 +49,11 @@ const Command = (props) => {
                                     timeout={3000} />}  
           {modules.length > 0 &&  
            <div className = "commandsMainContainer">
-                <div className = "modules">
+                <Box display={{ xs: 'none', md: 'block' }} className = "modules">
                     <ul className ='moduleList'>
+                        <Fade duration={500} triggerOnce cascade direction='up'>
                         {modules.map(category => {
                             return(
-
                             <li onClick={() => setNewActiveModule(category.categoryName)} className= "moduleListItem" key= {category.categoryName  }>
                                 <div className={'moduleWrapper' + ` ${category.categoryName}` }  >
                                      {category.categoryName}
@@ -65,13 +61,15 @@ const Command = (props) => {
                             </li>
                             )
                         })}
+                        </Fade>
                     </ul>
-                </div>
+                </Box>
+                <MobileCommands id='cmd' modules = {modules} setActiveModule = {setActiveModule} />
                    {presentCommands &&(
                    <div className ="commands">
                         <ul className = 'commandList'>
+                        <Fade duration={500} triggerOnce cascade direction='up'>
                             {presentCommands.commands.map(command => {
-                                console.log(command)
                                     return(
                                         <li key = {command.commandName} className ="commandListItem">
                                             <div className="commandWrapper">
@@ -95,8 +93,10 @@ const Command = (props) => {
                                     )
                                 })
                             }
+                            </Fade>
                         </ul>
-                     </div>)}
+                     </div>
+                     )}
              </div>}
         </div>
     )

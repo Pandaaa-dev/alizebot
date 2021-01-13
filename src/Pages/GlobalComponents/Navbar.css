@@ -1,15 +1,16 @@
 .navContainer {
-    width: 100%;
+    width: 100vw;
     height: 3.5vh;
     position: absolute;
     top: 0;
     left: 0;
-    background-color: 	#C71585;
+    background-color:#C71585;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-family: monospace;
 }
+
 
 .navHero {
     margin-left: 15vh;
@@ -59,4 +60,124 @@
     text-decoration: none;
     color: white;
     opacity: 1;
+}
+.navContainerMobile{
+    display: none;
+}
+
+@media(max-width: 960px){
+    .navContainer {
+       display: none;
+       /* background-color: red; */
+    }
+    .navContainerMobile{
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0%;
+        width: 100%;
+        height: 3.5vh;
+        background-color:#C71585;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: flex-start;
+    }
+    .burger {
+        margin-left: 1vh;
+    }
+    .burger1 {
+        width: 3.5vh;
+        transform-origin: left;
+        border-radius: 20%;
+        height: 0.5833vh;
+        background: white;
+        transition: all 0.5s linear;
+        margin: 2.5px 0;
+
+    }
+    .burger3 {
+        border-radius: 20%;
+        width: 3.5vh;
+        height: 0.5833vh;
+        transform-origin:left;
+        background: white;
+        /* border-radius: 30%; */
+        transition: all 0.5s linear;
+        margin: 2.5px 0;
+
+    }
+    .burger2 {
+        width: 3.5vh;
+        border-radius: 20%;
+        transform-origin: center;
+        height: 0.5833vh;
+        transition: all 0.5s linear;
+        background: white;
+        /* border-radius: 30%; */
+        margin: 2.5px 0;
+    }
+    
+    .navRoutesMobile {
+        background: white;
+        /* display: flex; */
+        /* text-align: center; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        margin-top: 3.5vh;
+        width: 60vw;
+        height: 90vh;
+        z-index: 3;
+        /* transform: scaleY(-100rem); */
+        transform: translateX(-100%);
+        transition: all 0.5s linear;
+    }
+    .routerItemMobile {
+        border-bottom: 0.2vh solid black;
+        color: black;
+        text-decoration: none;
+        font-family: monospace;
+        margin-bottom: 3vh;
+        opacity: 0.8;
+    }
+    .navMoblie     {
+        text-decoration: none; 
+        font-size: 5vh;
+        /* margin: 100rem; */
+      
+    }
+    .backdropNav {
+        display: none;
+        background: black;
+        opacity: 0.6;
+        position: absolute;
+        /* margin-top: 3.5vh; */
+        width: 100%;
+        height: 100vh;
+        z-index: 2;
+    }
+
+    .yesDisplay {
+        display: block;
+    }
+    .bruh {
+        transform: translateX(0);
+    }
+
+    .navActiveMobile {
+        opacity: 1;
+    }
+
+    .pressed1 {
+        transform: rotate(30deg);
+    }
+    .pressed3 {
+        transform: rotate(-30deg);
+    }
+    .pressed2 {
+        transform: rotate(90deg);
+        opacity: 0;
+    }
 }

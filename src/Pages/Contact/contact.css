@@ -1,11 +1,63 @@
 .contactContainer {
     margin-top: 3.5vh;
-    min-height: calc(100vh - 3.5vh);
+    min-height: calc(100vh - 4vh);
     background-color: rgba(0,0,0,0.8);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 5rem;
+    font-size: 3rem;
     font-family: monospace;
     color: whitesmoke;
+    overflow: hidden;
+    padding: 0 5%;
+}
+
+.webDev {
+    margin-top: 5rem;
+    margin-left: 1rem;
+    position: absolute;
+    /* top: -1; */
+    bottom: 0;
+    left: 0;
+    opacity: 0.3;
+}
+
+.support {
+    font-size: 3.2rem;
+}
+
+.support:hover {
+    opacity: 0.5;
+}
+/* .support: */
+
+@media (max-width: 960px){
+    
+    .contactContainer {
+        font-size: 2rem;
+        margin: auto;
+        text-align: center;
+        min-height: 100vh;
+    }
+    .botDev {
+        font-size: 1rem;
+    }
+ 
+    .support {
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: #C71585;
+    }
+
+    .contactSupportServer {
+        font-size: 1rem;
+        margin-top: 1.5rem;
+    }
+    .webDev {
+        font-size: 1rem;
+        bottom: 1rem;
+        left: 0;
+        margin-left: 0.5rem;
+    }
 }

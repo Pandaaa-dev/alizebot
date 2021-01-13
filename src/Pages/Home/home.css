@@ -11,6 +11,7 @@
     background-repeat: no-repeat;
     background-position-y: -15rem;
     background-size: 100%;
+    width: 100vw;
 }
 
 .homeTitle {
@@ -68,9 +69,45 @@
 }
 
 .presentTitles {
-    font-size: 2rem;
+    font-size: 2.5vh;
     font-family: monospace;
     color: white;
     opacity: 0.8;
     margin: 2rem 0;
+}
+
+.supportBtn {
+    font-size: 0.5rem;
+}
+
+
+@media (max-width: 960px){
+    .HomeContainer {
+        background: url('../../assets/NyZAfpkh.jpg');
+        background-repeat: no-repeat;
+        background-position-y: -10rem;
+        background-position-x: -15rem;
+        background-size: 200%;
+        /* background-position: center; */
+        /* backgroundz */
+        width: 100vw;
+    }
+    .homeContainerBackdrop {
+        padding: 0% 5%;
+        padding-bottom: 0;
+    }
+
+    .homeTitle {
+        font-size: 4vh;
+    }
+    .homeDesc {
+        font-size: 2.5vh;
+        margin: 0 10%;
+    }
+
+    .btn{
+        display: block;
+        margin-top: 50rem;
+    }
+  
 }

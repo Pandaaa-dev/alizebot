@@ -1,11 +1,14 @@
+// "homepage": "https://pandaaa-dev.github.io/alizebot/"
+
 import Navbar from './GlobalComponents/Navbar'
 import Home from './Home/Home'
 import Commands from './Commands/Commands'
+import Invite from './Invite/Invite'
 import Contact from './Contact/Contact'
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import {Switch, 
        BrowserRouter as Router,
-       Route } from 'react-router-dom'
+       Route} from 'react-router-dom'
 const theme = createMuiTheme({
     palette: {
        primary: {
@@ -25,25 +28,23 @@ const Layout = (props) => {
         <Navbar />
         <Switch>
         
-        <Route exact path="/">
+        <Route exact path="/alizebot">
             <Home />
           </Route>
 
-          <Route exact path="/commands">
+          <Route exact path="/alizebot/commands">
             <Commands />
           </Route>
 
-          <Route exact path="/contact">
+          <Route exact path="/alizebot/contact">
             <Contact />
           </Route>
-
-          {/* <Route exact path="/*">
-            THIS IS NOT A PATH!  
-          </Route> */}
-
+          <Route exact path='/alizebot/invite'>
+            <Invite />
+            </Route>
         </Switch>
         </Router>
-       </ ThemeProvider>
+       </ ThemeProvider>  
     )
 }
 

@@ -39,18 +39,18 @@ const Navbar = (props) => {
         <>
         <div  className = "navContainer"> 
             <div className = "navHero">
-            <NavLink activeClassName="navActive" className = "navHeroo" exact to="/alizebot">
+            <NavLink activeClassName="navActive" className = "navHeroo" exact to="/">
                     AlizeBot
                     </NavLink>  
                  </div>
             <div className = "navRoutes">
                 <div className = "routerItem"> 
-                    <NavLink activeClassName="navActive" className = "nav"exact to="/alizebot/commands">
+                    <NavLink activeClassName="navActive" className = "nav"exact to="/commands">
                     Commands
                     </NavLink> 
                 </div>   
                 <div  className = "routerItem"> 
-                    <NavLink activeClassName="navActive" className = "nav"exact to="/alizebot/contact">
+                    <NavLink activeClassName="navActive" className = "nav"exact to="/contact">
                     Contact
                     </NavLink> 
                 </div>      
@@ -65,17 +65,17 @@ const Navbar = (props) => {
             </div>
             <div ref={mobileRoutesRef} className='navRoutesMobile'>
             <div onClick={removeMenu} className='routerItemMobile'>
-                 <NavLink activeClassName="navActiveMobile" className = "navMoblie" exact to="/alizebot">
+                 <NavLink activeClassName="navActiveMobile" className = "navMoblie" exact to="/">
                     Home
                     </NavLink> 
                 </div>
                 <div onClick={removeMenu} className='routerItemMobile'>
-                 <NavLink activeClassName="navActiveMobile" className = "navMoblie" exact to="/alizebot/commands">
+                 <NavLink activeClassName="navActiveMobile" className = "navMoblie" exact to="/commands">
                     Commands
                     </NavLink> 
                 </div>
                 <div onClick={removeMenu}  className = "routerItemMobile"> 
-                    <NavLink activeClassName="navActiveMobile" className = "navMoblie" exact to="/alizebot/contact">
+                    <NavLink activeClassName="navActiveMobile" className = "navMoblie" exact to="/contact">
                     Contact
                     </NavLink> 
                 </div>      

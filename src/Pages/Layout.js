@@ -28,18 +28,18 @@ const Layout = (props) => {
         <Navbar />
         <Switch>
         
-        <Route exact path="/alizebot">
+        <Route exact path="/">
             <Home />
           </Route>
 
-          <Route exact path="/alizebot/commands">
+          <Route exact path="/commands">
             <Commands />
           </Route>
 
-          <Route exact path="/alizebot/contact">
+          <Route exact path="/contact">
             <Contact />
           </Route>
-          <Route exact path='/alizebot/invite'>
+          <Route exact path='/invite'>
             <Invite />
             </Route>
         </Switch>
